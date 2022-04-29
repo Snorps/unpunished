@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "net.snorps.lenientdeath.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"refmap": "lenientdeath.refmap.json",
+	"mixins": [
+		"PlayerMixin"
+	],
+	"client": [
+	],
+	"minVersion": "0.8"
+}
