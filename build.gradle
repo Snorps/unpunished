@@ -21,17 +21,17 @@ apply plugin: 'org.spongepowered.mixin'
 
 //think this goes here
 mixin {
-    add sourceSets.main, "lenientdeath.refmap.json"
+    add sourceSets.main, "unpunished.refmap.json"
 
-    config "lenientdeath.mixins.json"
+    config "unpunished.mixins.json"
 }
 
 
 
 
-version = '0.0.9'
-group = 'net.snorps.lenientdeath' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'lenientdeath'
+version = '0.0.3'
+group = 'net.snorps.unpunished' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'unpunished'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -74,10 +74,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'lenientdeath'
+            property 'forge.enabledGameTestNamespaces', 'unpunished'
 
             mods {
-                lenientdeath {
+                unpunished {
                     source sourceSets.main
                 }
             }
@@ -91,10 +91,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'lenientdeath'
+            property 'forge.enabledGameTestNamespaces', 'unpunished'
 
             mods {
-                lenientdeath {
+                unpunished {
                     source sourceSets.main
                 }
             }
@@ -119,10 +119,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'lenientdeath'
+            property 'forge.enabledGameTestNamespaces', 'unpunished'
 
             mods {
-                lenientdeath {
+                unpunished {
                     source sourceSets.main
                 }
             }
@@ -135,11 +135,11 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            // Specify the lenientdeath for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'lenientdeath', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            // Specify the unpunished for data generation, where to output the resulting resource, and where to look for existing resources.
+            args '--mod', 'unpunished', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                lenientdeath {
+                unpunished {
                     source sourceSets.main
                 }
             }
@@ -185,12 +185,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "lenientdeath",
-                "Specification-Vendor"    : "lenientdeathsareus",
+                "Specification-Title"     : "unpunished",
+                "Specification-Vendor"    : "unpunishedsareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "lenientdeathsareus",
+                "Implementation-Vendor"   : "unpunishedsareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

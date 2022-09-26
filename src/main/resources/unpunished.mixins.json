@@ -1,8 +1,8 @@
 {
 	"required": true,
-	"package": "net.snorps.lenientdeath.mixin",
+	"package": "net.snorps.unpunished.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"refmap": "lenientdeath.refmap.json",
+	"refmap": "unpunished.refmap.json",
 	"mixins": [
 		"PlayerMixin"
 	],
