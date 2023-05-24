@@ -1,5 +1,7 @@
 package net.snorps.unpunished.mixin;
 
+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -35,5 +37,11 @@ public abstract class PlayerMixin extends LivingEntity {
             points += round(self.getXpNeededForNextLevel() * level);
 
             ci.setReturnValue(points);
+    }
+
+    @Inject(at=@At("RETURN"), method= "createAttributes", cancellable=true)
+    private static void addArmor(CallbackInfoReturnable<AttributeSupplier.Builder> ci) {
+        AttributeSupplier.Builder db = ci.getReturnValue();
+        ci.setReturnValue(db.add(Attributes.ARMOR, 4.5));
     }
 }
